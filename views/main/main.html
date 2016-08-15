@@ -1,0 +1,46 @@
+<ion-view title="礼物说">
+	<ion-nav-buttons side="left">
+		<button class="button button-clear icon ion-ios-list-outline"></button>
+	</ion-nav-buttons>
+	<ion-nav-buttons side="right">
+		<button class="button button-clear icon ion-ios-search-strong"></button>
+	</ion-nav-buttons>
+	<ion-nav-title>
+		<h2 class="main-title">礼物说</h2>
+	</ion-nav-title>
+	<ion-content class="main-content">
+		<!-- 下拉刷新 -->
+		<ion-refresher spinner="dots" on-refresh="onRefresh()">
+			
+		</ion-refresher>
+		
+		<div>
+			<!-- 轮播图 -->
+			<ion-slide-box class="banner" does-continue="true" auto-play="true">
+				<ion-slide ng-repeat="bannerItem in bannerData">
+					<img ng-src="{{bannerItem.imageUrl}}"/>
+				</ion-slide>
+			</ion-slide-box>
+			
+			<!-- 二级的滚动视图 -->
+			<ion-scroll class="s-banner" direction="x" scrollbar-x="false">
+				<img ng-repeat="sbItem in sBannerData" ng-src="{{sbItem.imageUrl}}" />
+			</ion-scroll>
+			
+			<ion-list class="list-borderless main-list">
+				<div class=""></div>
+				<ion-item ng-repeat="item in listData">
+					<img ng-src="{{item.coverImg}}" />
+					<div class="item-title">
+						<p>{{item.title}}</p>
+						<p><i class="icon ion-android-favorite-outline assertive"></i>{{item.likes}}</p>
+					</div>
+				</ion-item>
+			</ion-list>
+		</div>
+		<!-- 上拉加载更多 -->
+		<ion-infinite-scroll spinner="dots" immediate-check="false" on-infinite="loadMore()">
+			
+		</ion-infinite-scroll>
+	</ion-content>
+</ion-view>

@@ -1,0 +1,68 @@
+/***************** main start ********************/
+.main-title{
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 44px;
+	color: white;	
+}
+
+.main-content .banner img{
+	width: 100%;
+	display: block;
+}
+
+.slider-pager .slider-pager-page{
+	font-size: 12px;
+	color: white;
+}
+
+.main-content .s-banner{
+	width: 100%;
+	background: white;
+	height: 115px;
+}
+
+.main-content .s-banner .scroll{
+	width: 850px;
+	height: 115px;
+}
+
+.main-content .s-banner img{
+	width: 95px;
+	height: 95px;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+.main-content .main-list .list{
+	background: #F5F5F5;
+}
+.main-content .main-list .item{
+	padding: 0;
+	margin-top: 6px;
+}
+.main-content .main-list img{
+	width: 100%;
+	display: block;
+}
+
+.main-content .main-list .item-title{
+	display: -webkit-flex;
+	height: 50px;
+}
+.main-content .main-list .item-title p{
+	font-size: 16px;
+	line-height: 50px;
+}
+.main-content .main-list .item-title p:nth-of-type(1){
+	flex: 1;
+}
+.main-content .main-list .item-title p:nth-of-type(2){
+	width: 70px;
+}
+.main-content .spinner{
+	stroke: #e42112;
+    fill: #e42112;
+}
+/***************** main end ********************/
+
